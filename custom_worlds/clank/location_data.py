@@ -73,6 +73,8 @@ LOCATION_NAME_TO_ID = {
     "RowSanity: The Vault": 72, 
     "RowSanity: Watcher": 73,
 
+    # END OF ITEM DICT - used to set the starting value for the bonus row and market
+    "end_of_dict": 80
 }
 
 

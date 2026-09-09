@@ -134,7 +134,7 @@ class RowSanity(Choice):
     Locations for buying cards:
     - None: Disables RowSanity.
     - Gems: Each unique Gem card purchase is also a check.
-    - All: Every card is a check (Reccomended for RowShufflingStyle = All).
+    - All: Every card is a check (forced if RowShufflingStyle = All).
     Default: Gems
     """
     display_name = "RowSanity"
@@ -143,6 +143,7 @@ class RowSanity(Choice):
     option_Gems = 1
     option_All = 2
     default = 1
+
 
 # Bonus dungeon row options
 class BonusRow(Toggle):
@@ -158,8 +159,9 @@ class BonusRow(Toggle):
 
 class BonusRowCards(Range):
     """
-    The amount of cards you want to have in the Bonus Row
-    - A majority of locations come from here, generally please do not decrease this number
+    The amount of cards you want to have in the Bonus Row.
+    - A majority of locations come from here, generally please do not decrease this number.
+    - This is a MINIMUM, the actual amount may be larger than this depending on other settings.
     """
     display_name = "Bonus Row Cards"
 

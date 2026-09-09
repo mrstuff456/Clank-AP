@@ -25,9 +25,21 @@ def get_location_names_with_ids(location_names: list[str]) -> dict[str, int | No
 
 
 def create_all_locations(world: ClankWorld) -> None:
+    create_shop_locations(world)
     create_regular_locations(world)
     create_events(world)
 
+
+def create_shop_locations(world: ClankWorld) -> None:
+    # this function creates all the location names and IDs for the bonus row and bonus market
+    amount_of_bonus_row = world.options.bonus_row_cards.value
+    starting_id = LOCATION_NAME_TO_ID["end_of_dict"] + 1
+    bonus_row_items = []
+    for i in range(amount_of_bonus_row):
+        LOCATION_NAME_TO_ID[f"Bonus Row Unlock {i + 1}"] = starting_id + i
+        bonus_row_items.append(f"Bonus Row Unlock {i + 1}")
+    LOCATION_TYPES["bonus_row"] = bonus_row_items
+        
 
 def create_regular_locations(world: ClankWorld) -> None:
     # put all locations into regions
@@ -48,6 +60,10 @@ def create_regular_locations(world: ClankWorld) -> None:
     # artifact extraction
     overall_region_locations.update(
         get_location_names_with_ids(LOCATION_TYPES["artifact_extraction"])
+    )
+    # bonus row
+    overall_region_locations.update(
+        get_location_names_with_ids(LOCATION_TYPES["bonus_row"])
     )
 
     overall_region.add_locations(overall_region_locations, ClankLocation)
