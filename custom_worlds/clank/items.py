@@ -48,6 +48,17 @@ def create_all_items(world: ClankWorld) -> None:
             ITEMS_TO_ADD.append(i)
 
 
+    # add Card Unlocks:
+    # packs
+    if world.options.row_shuffling_style == 0:
+        for i in ITEM_TYPES["dungeon_row_pack_normal"]:
+            ITEMS_TO_ADD.append(i)
+    # all
+    if world.options.row_shuffling_style == 3:
+        for i in ITEM_TYPES["dungeon_row_card_unlock"]:
+            ITEMS_TO_ADD.append(i)
+
+
     # insert all the items into the pool
     for i in ITEMS_TO_ADD:
         itempool.append(world.create_item(i))

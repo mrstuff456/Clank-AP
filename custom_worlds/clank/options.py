@@ -73,7 +73,7 @@ class MonkeyIdolItemBehaviour(Choice):
 
 class MonkeyIdolLocationBehaviour(Toggle):
     """
-    If True, Monkey idol collection checks are made for each board.
+    If True, Monkey idol collection checks are made individually for each board.
     If False, checks are cumulative for all boards (See, Speak, Hear).
     Default: True (Reccomended)
     """
@@ -100,9 +100,8 @@ class RowShufflingStyle(Choice):
     """
     The style in which dungeon row cards are shuffled into the multiworld:
     - Packs (Reccomended): Cards are made into prebuilt "packs", each check unlocks a set of cards.
-    - SmallPacks: Tighter groups for more checks.
-    - RandomPacks: Like packs, but instead the card packs are randomly made on generation.
-    - ProgressivePacks: cards are grouped by power, and each progressive check unlocks the next more powerful pack.
+    - RandomPacks (DOESNT EXIST YET): Like packs, but instead the card packs are randomly made on generation.
+    - ProgressivePacks (DOESNT EXIST YET): cards are grouped by power, and each progressive check unlocks the next more powerful pack.
     - All: Each individual card must be unlocked via a check, not for the feint of heart!
     Default: Packs
     Requires DungeonRow to be True
@@ -110,10 +109,9 @@ class RowShufflingStyle(Choice):
     display_name = "Row Shuffling Style"
 
     option_Packs = 0
-    option_SmallPacks = 1
-    option_RandomPacks = 2
-    option_ProgressivePacks = 3
-    option_All = 4
+    option_RandomPacks = 1
+    option_ProgressivePacks = 2
+    option_All = 3
     default = 0
 
 
@@ -129,20 +127,25 @@ class PackSize(Range):
     default = 4
 
 
-class RowSanity(Choice):
+class GemCollection(Toggle):
     """
-    Locations for buying cards:
-    - None: Disables RowSanity.
-    - Gems: Each unique Gem card purchase is also a check.
-    - All: Every card is a check (forced if RowShufflingStyle = All).
-    Default: Gems
+    Create locations for purchasing the Gem cards
+    Default: True
+    """
+    display_name = "Gem Collection"
+
+    default = True
+
+
+class RowSanity(Toggle):
+    """
+    Every card purchase is a check.
+    HIGHLY RECOMMENDED if RowShufflingStyle = All
+    Default: False
     """
     display_name = "RowSanity"
 
-    option_None = 0
-    option_Gems = 1
-    option_All = 2
-    default = 1
+    default = False
 
 
 # Bonus dungeon row options
@@ -215,6 +218,7 @@ class ClankOptions(PerGameCommonOptions):
     # dungeon row options
     dungeon_row: DungeonRow
     row_shuffling_style: RowShufflingStyle
+    gem_collection: GemCollection
     rowsanity: RowSanity
     pack_size: PackSize
 

@@ -73,8 +73,15 @@ LOCATION_NAME_TO_ID = {
     "RowSanity: The Vault": 72, 
     "RowSanity: Watcher": 73,
 
+    # Gem collection: 81-90
+    "Gem Collection: Dragon's Eye": 81,
+    "Gem Collection: Diamond": 82,
+    "Gem Collection: Emerald": 83,
+    "Gem Collection: Sapphire": 84,
+    "Gem Collection: Ruby": 85,
+
     # END OF ITEM DICT - used to set the starting value for the bonus row and market
-    "end_of_dict": 80
+    "end_of_dict": 90,
 }
 
 
@@ -90,5 +97,12 @@ LOCATION_TYPES = {
     ],
     "rowsanity": [
         "RowSanity: Amulet of Vigor", "RowSanity: Apothecary", "RowSanity: Archaeologist", "RowSanity: Boots of Swiftness", "RowSanity: Bracers of Agility", "RowSanity: Brilliance", "RowSanity: Cleric of the Sun", "RowSanity: Dead Run", "RowSanity: Diamond", "RowSanity: Dragon's Eye", "RowSanity: Dwarven Peddler", "RowSanity: Elven Boots", "RowSanity: Elven Cloak", "RowSanity: Elven Dagger", "RowSanity: Emerald", "RowSanity: Flying Carpet", "RowSanity: Gem Collector", "RowSanity: Invoker of the Ancients", "RowSanity: Kobold Merchant", "RowSanity: Lucky Coin", "RowSanity: Master Burglar", "RowSanity: Mister Whiskers", "RowSanity: MonkeyBot 3000", "RowSanity: Move Silently", "RowSanity: Pickaxe", "RowSanity: Rebel Captain", "RowSanity: Rebel Miner", "RowSanity: Rebel Scout", "RowSanity: Rebel Soldier", "RowSanity: Ruby", "RowSanity: Sapphire", "RowSanity: Scepter of the Ape Lord", "RowSanity: Search", "RowSanity: Silver Spear", "RowSanity: Singing Sword", "RowSanity: Sleight of Hand", "RowSanity: Sneak", "RowSanity: Swagger", "RowSanity: Tattle", "RowSanity: The Duke", "RowSanity: The Mountain King", "RowSanity: The Queen of Hearts", "RowSanity: Treasure Hunter", "RowSanity: Treasure Map", "RowSanity: Tunnel Guide", "RowSanity: Underworld Dealing", "RowSanity: Wand of Recall", "RowSanity: Wand of Wind", "RowSanity: Wizard", "RowSanity: Animated Door", "RowSanity: Dragon Shrine", "RowSanity: Ladder", "RowSanity: Shrine", "RowSanity: Teleporter", "RowSanity: Belcher", "RowSanity: Cave Troll", "RowSanity: Crystal Golem", "RowSanity: Kobold", "RowSanity: Ogre", "RowSanity: Orc Grunt", "RowSanity: Overlord", "RowSanity: The Vault", "RowSanity: Watcher"
+    ],
+    "gem_collection": [
+    "Gem Collection: Dragon's Eye",
+    "Gem Collection: Diamond",
+    "Gem Collection: Emerald",
+    "Gem Collection: Sapphire",
+    "Gem Collection: Ruby",
     ]
 }

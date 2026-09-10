@@ -56,15 +56,31 @@ def create_regular_locations(world: ClankWorld) -> None:
     base_board_locations = {}
     advanced_board_locations = {}
 
+
     # locations setup
+
     # artifact extraction
     overall_region_locations.update(
         get_location_names_with_ids(LOCATION_TYPES["artifact_extraction"])
     )
+
+    # gem collection checks
+    if world.options.gem_collection:
+        overall_region_locations.update(
+            get_location_names_with_ids(LOCATION_TYPES["gem_collection"])
+        )
+
+    # rowsanity
+    if world.options.rowsanity:
+        overall_region_locations.update (
+            get_location_names_with_ids(LOCATION_TYPES["rowsanity"])
+        )
+
     # bonus row
     overall_region_locations.update(
         get_location_names_with_ids(LOCATION_TYPES["bonus_row"])
     )
+
 
     overall_region.add_locations(overall_region_locations, ClankLocation)
     base_board.add_locations(base_board_locations, ClankLocation)
