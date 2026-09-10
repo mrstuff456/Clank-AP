@@ -1,0 +1,29 @@
+{
+    "dungeon_packs_normal": {
+        "Dungeon Row: Late-game Pack 1": ["RowSanity: Move Silently", "RowSanity: Brilliance", "RowSanity: Wand of Recall", "RowSanity: Wand of Wind"],
+        "Dungeon Row: Late-game Pack 2": ["RowSanity: Boots of Swiftness", "RowSanity: Move Silently", "RowSanity: Silver Spear", "RowSanity: Wand of Recall"],
+        "Dungeon Row: Mid-tier Pack": ["RowSanity: Flying Carpet", "RowSanity: Elven Cloak", "RowSanity: The Queen of Hearts", "RowSanity: Rebel Soldier"],
+        "Dungeon Row: Speedy Pack 1": ["RowSanity: Dead Run", "RowSanity: Elven Boots", "RowSanity: Tunnel Guide", "RowSanity: Rebel Captain"],
+        "Dungeon Row: Speedy Pack 2": ["RowSanity: Dead Run", "RowSanity: Elven Dagger", "RowSanity: Treasure Hunter", "RowSanity: Rebel Scout"],
+        "Dungeon Row: Gem Pack 1": ["RowSanity: Gem Collector", "RowSanity: Emerald", "RowSanity: Sapphire", "RowSanity: Ruby", "RowSanity: Diamond"],
+        "Dungeon Row: Gem Pack 2": ["RowSanity: Dragon's Eye", "RowSanity: Emerald", "RowSanity: Sapphire", "RowSanity: Ruby", "RowSanity: Sapphire"],
+        "Dungeon Row: Gold Pack 1": ["RowSanity: Search", "RowSanity: Treasure Map", "RowSanity: Dwarven Peddler", "RowSanity: Rebel Miner"],
+        "Dungeon Row: Gold Pack 2": ["RowSanity: Search", "RowSanity: The Duke", "RowSanity: Apothecary", "RowSanity: Pickaxe"],
+        "Dungeon Row: Swag Pack 1": ["RowSanity: Lucky Coin", "RowSanity: MonkeyBot 3000", "RowSanity: Swagger", "RowSanity: Sneak"],
+        "Dungeon Row: Swag Pack 2": ["RowSanity: Lucky Coin", "RowSanity: Scepter of the Ape Lord", "RowSanity: Swagger", "RowSanity: Sneak"],
+        "Dungeon Row: Tome Pack": ["RowSanity: Underworld Dealing", "RowSanity: Wizard", "RowSanity: Kobold Merchant", "RowSanity: Pickaxe"],
+        "Dungeon Row: Skill Pack": ["RowSanity: Tattle", "RowSanity: Tattle", "RowSanity: Amulet of Vigor", "RowSanity: Archaeologist"],
+        "Dungeon Row: Control Pack": ["RowSanity: Silver Spear", "RowSanity: Singing Sword", "RowSanity: Sleight of Hand", "RowSanity: Mister Whiskers"],
+        "Dungeon Row: Deck Fixing Pack": ["RowSanity: Master Burglar", "RowSanity: Master Burglar", "RowSanity: Treasure Hunter", "RowSanity: Sleight of Hand"],
+        "Dungeon Row: Vitality Pack 1": ["RowSanity: Bracers of Agility", "RowSanity: Cleric of the Sun", "RowSanity: Invoker of the Ancients", "RowSanity: Tunnel Guide"],
+        "Dungeon Row: Vitality Pack 2": ["RowSanity: Bracers of Agility", "RowSanity: Cleric of the Sun", "RowSanity: The Mountain King", "RowSanity: Archaeologist"],
+        "Dungeon Row: Basic Monster Pack 1": ["RowSanity: Orc Grunt", "RowSanity: Watcher", "RowSanity: Kobold", "RowSanity: Belcher"],
+        "Dungeon Row: Basic Monster Pack 2": ["RowSanity: Orc Grunt", "RowSanity: Watcher", "RowSanity: Kobold", "RowSanity: Belcher"],
+        "Dungeon Row: Basic Monster Pack 3": ["RowSanity: Orc Grunt", "RowSanity: Watcher", "RowSanity: Kobold", "RowSanity: Animated Door"],
+        "Dungeon Row: Hard Monster Pack 1":  ["RowSanity: Crystal Golem", "RowSanity: Ogre", "RowSanity: Overlord", "RowSanity: Cave Troll"],
+        "Dungeon Row: Hard Monster Pack 2": ["RowSanity: Crystal Golem", "RowSanity: Ogre", "RowSanity: Overlord", "RowSanity: Animated Door"],
+        "Dungeon Row: Device Pack 1": ["RowSanity: Shrine", "RowSanity: Ladder", "RowSanity: Teleporter"],
+        "Dungeon Row: Device Pack 2": ["RowSanity: Shrine", "RowSanity: Ladder", "RowSanity: Teleporter"],
+        "Dungeon Row: Device Pack 3": ["RowSanity: Shrine", "RowSanity: Dragon Shrine", "RowSanity: Dragon Shrine", "RowSanity: The Vault"]
+    }
+}
