@@ -1,5 +1,5 @@
 # Clank!AP
-This is a web-based client and apworld to allow support for  playing Clank! in Archipelago multiworlds. 
+This is a web-based client and apworld to allow support for playing Clank! in Archipelago multiworlds. 
 
 # Links/Guides
 
