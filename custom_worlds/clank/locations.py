@@ -35,22 +35,24 @@ def create_shop_locations(world: ClankWorld) -> None:
     current_id = LOCATION_NAME_TO_ID["end_of_dict"] + 1
 
     # bonus row
-    amount_of_bonus_row = world.options.bonus_row_cards.value
-    bonus_row_items = []
-    for i in range(amount_of_bonus_row):
-        LOCATION_NAME_TO_ID[f"Bonus Row Unlock {i + 1}"] = current_id
-        bonus_row_items.append(f"Bonus Row Unlock {i + 1}")
-        current_id += 1
-    LOCATION_TYPES["bonus_row"] = bonus_row_items
+    if world.options.bonus_row:
+        amount_of_bonus_row = world.options.bonus_row_cards.value
+        bonus_row_items = []
+        for i in range(amount_of_bonus_row):
+            LOCATION_NAME_TO_ID[f"Bonus Row Unlock {i + 1}"] = current_id
+            bonus_row_items.append(f"Bonus Row Unlock {i + 1}")
+            current_id += 1
+        LOCATION_TYPES["bonus_row"] = bonus_row_items
 
     # bonus market
-    amount_of_bonus_market = world.options.bonus_market_checks.value
-    bonus_market_items = []
-    for i in range(amount_of_bonus_market):
-        LOCATION_NAME_TO_ID[f"Bonus Market Unlock {i + 1 }"] = current_id
-        bonus_market_items.append(f"Bonus Market Unlock {i + 1}")
-        current_id += 1
-    LOCATION_TYPES["bonus_market"] = bonus_market_items
+    if world.options.bonus_market:
+        amount_of_bonus_market = world.options.bonus_market_checks.value
+        bonus_market_items = []
+        for i in range(amount_of_bonus_market):
+            LOCATION_NAME_TO_ID[f"Bonus Market Unlock {i + 1 }"] = current_id
+            bonus_market_items.append(f"Bonus Market Unlock {i + 1}")
+            current_id += 1
+        LOCATION_TYPES["bonus_market"] = bonus_market_items
         
 
 def create_regular_locations(world: ClankWorld) -> None:
@@ -72,9 +74,10 @@ def create_regular_locations(world: ClankWorld) -> None:
     # locations setup
 
     # artifact extraction
-    overall_region_locations.update(
-        get_location_names_with_ids(LOCATION_TYPES["artifact_extraction"])
-    )
+    if world.options.artifacts:
+        overall_region_locations.update(
+            get_location_names_with_ids(LOCATION_TYPES["artifact_extraction"])
+        )
 
     # gem collection checks
     if world.options.gem_collection:
@@ -89,14 +92,16 @@ def create_regular_locations(world: ClankWorld) -> None:
         )
 
     # bonus row
-    overall_region_locations.update(
-        get_location_names_with_ids(LOCATION_TYPES["bonus_row"])
-    )
+    if world.options.bonus_row:
+        overall_region_locations.update(
+            get_location_names_with_ids(LOCATION_TYPES["bonus_row"])
+        )
 
     # bonus market
-    overall_region_locations.update(
-        get_location_names_with_ids(LOCATION_TYPES["bonus_market"])
-    )
+    if world.options.bonus_market:
+        overall_region_locations.update(
+            get_location_names_with_ids(LOCATION_TYPES["bonus_market"])
+        )
 
 
     overall_region.add_locations(overall_region_locations, ClankLocation)
