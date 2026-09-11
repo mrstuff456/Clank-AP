@@ -32,13 +32,25 @@ def create_all_locations(world: ClankWorld) -> None:
 
 def create_shop_locations(world: ClankWorld) -> None:
     # this function creates all the location names and IDs for the bonus row and bonus market
+    current_id = LOCATION_NAME_TO_ID["end_of_dict"] + 1
+
+    # bonus row
     amount_of_bonus_row = world.options.bonus_row_cards.value
-    starting_id = LOCATION_NAME_TO_ID["end_of_dict"] + 1
     bonus_row_items = []
     for i in range(amount_of_bonus_row):
-        LOCATION_NAME_TO_ID[f"Bonus Row Unlock {i + 1}"] = starting_id + i
+        LOCATION_NAME_TO_ID[f"Bonus Row Unlock {i + 1}"] = current_id
         bonus_row_items.append(f"Bonus Row Unlock {i + 1}")
+        current_id += 1
     LOCATION_TYPES["bonus_row"] = bonus_row_items
+
+    # bonus market
+    amount_of_bonus_market = world.options.bonus_market_checks.value
+    bonus_market_items = []
+    for i in range(amount_of_bonus_market):
+        LOCATION_NAME_TO_ID[f"Bonus Market Unlock {i + 1 }"] = current_id
+        bonus_market_items.append(f"Bonus Market Unlock {i + 1}")
+        current_id += 1
+    LOCATION_TYPES["bonus_market"] = bonus_market_items
         
 
 def create_regular_locations(world: ClankWorld) -> None:
@@ -79,6 +91,11 @@ def create_regular_locations(world: ClankWorld) -> None:
     # bonus row
     overall_region_locations.update(
         get_location_names_with_ids(LOCATION_TYPES["bonus_row"])
+    )
+
+    # bonus market
+    overall_region_locations.update(
+        get_location_names_with_ids(LOCATION_TYPES["bonus_market"])
     )
 
 

@@ -80,7 +80,7 @@ LOCATION_NAME_TO_ID = {
     "Gem Collection: Sapphire": 84,
     "Gem Collection: Ruby": 85,
 
-    # END OF ITEM DICT - used to set the starting value for the bonus row and market
+    # END OF ITEM DICT - used to set the starting value for the generated items
     "end_of_dict": 90,
 }
 

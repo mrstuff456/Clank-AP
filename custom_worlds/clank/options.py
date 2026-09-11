@@ -165,6 +165,7 @@ class BonusRowCards(Range):
     The amount of cards you want to have in the Bonus Row.
     - A majority of locations come from here, generally please do not decrease this number.
     - This is a MINIMUM, the actual amount may be larger than this depending on other settings.
+    Default: 50
     """
     display_name = "Bonus Row Cards"
 
@@ -184,6 +185,43 @@ class BonusRowPrices(OptionDict):
         "filler": 3,
         "trap": 2,
         "junk": 2,
+    }
+
+
+# Bonus Market Options
+class BonusMarket(Toggle):
+    """
+    Like the Bonus Row, the Bonus Market is a place in the market where you can spend gold for Checks.
+    - Please also do not turn this off, its good to have for the checks.
+    Default: True
+    """
+    display_name = "Bonus Market"
+
+    default = True
+
+
+class BonusMarketChecks(Range):
+    """
+    The amount of Checks in the Bonus Market.
+    """
+    display_name = "Bonus Market Checks"
+
+    range_start = 10
+    range_end = 50
+    default = 20
+
+
+class BonusMarketPrices(OptionDict):
+    """
+    The cost of Bonus Market items depending on their type:
+    """
+    display_name = "Bonus Market Prices"
+    default = {
+        "progression": 5,
+        "useful": 4,
+        "filler": 3,
+        "trap": 2,
+        "junk": 1,
     }
 
 
@@ -226,6 +264,11 @@ class ClankOptions(PerGameCommonOptions):
     bonus_row: BonusRow
     bonus_row_cards: BonusRowCards
     bonus_row_prices: BonusRowPrices
+
+    # bonus market
+    bonus_market: BonusMarket
+    bonus_market_checks: BonusMarketChecks
+    bonus_market_prices: BonusMarketPrices
 
 
 option_groups = [
