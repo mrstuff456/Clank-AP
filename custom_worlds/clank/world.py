@@ -11,7 +11,7 @@ from . import options as clank_options  # rename due to a name conflict with Wor
 
 class ClankWorld(World):
     """
-    Clank!AP is a manual archipelago implementation of Clank! A deckbuilding adventure.
+    Clank!AP is an archipelago implementation of Clank! A deckbuilding adventure.
     This is to be played with a physical copy of Clank! Expansions are optional.
     """
 
